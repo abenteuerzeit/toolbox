@@ -25,20 +25,6 @@ def remove_html_tag_attributes(file, attributes_list):
         save_new_file.writelines(new_lines)
 
 
-if __name__ == "__main__":
-    # files = [
-    #         'add-answer.html',
-    #         'add-question.html',
-    #         'edit-question.html',
-    #         'error.html',
-    #         'layout.html',
-    #         'question.html'
-    #          ]
-    # for file in files:
-    #     filepath = f"./templates/{file}"
-    #     remove_html_tag_attributes(filepath, ["style", "class"])
-
-
 def remove_tag(file, tag):
     # remove a complete tag from file
     with open(file) as html_file:
@@ -55,5 +41,18 @@ def remove_tag(file, tag):
         for line in lines:
             print(line)
 
+
+if __name__ == "__main__":
+    # files = [
+    #         'add-answer.html',
+    #         'add-question.html',
+    #         'edit-question.html',
+    #         'error.html',
+    #         'layout.html',
+    #         'question.html'
+    #          ]
+    # for file in files:
+    #     filepath = f"./templates/{file}"
+    #     remove_html_tag_attributes(filepath, ["style", "class"])
     remove_tag('add-question.html', 'a')
     pass
